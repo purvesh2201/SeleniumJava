@@ -39,7 +39,7 @@ public class LoginPageTest extends BaseClass {
 	public void invalidlogintext(String username,String password) {
 		loginpage.login(username,password);
 		System.out.println(loginpage.isErrorDispalyed("Invalid credentials"));
-		Assert.assertTrue(loginpage.isErrorDispalyed("Invalid credentials"));
+		Assert.assertTrue(loginpage.isErrorDispalyed("Invalid credentials1"));
 		ExtentManager.logStep("Either username or password is incorrect");
 	}
 	
