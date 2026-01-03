@@ -94,7 +94,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<!-- Specify the location of your testng.xml file -->
-							<suiteXmlFile>\SeleniumJava\src\test\resources\testng.xml</suiteXmlFile>
+							<suiteXmlFile>C:/Users/Automation/git/repository/SeleniumJava/src/test/resources/testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
