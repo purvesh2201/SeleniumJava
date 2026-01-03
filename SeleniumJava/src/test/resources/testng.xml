@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="SeleniumJava" parallel = "classes" thread-count="10">
+
+<listeners>
+<listener class-name= "com.Automation.Listners.TestListener">
+</listener>
+</listeners>
+
+	<test name="SeleniumJavaTest">
+	
+		<classes>
+			<class name="com.Automation.Test.LoginPageTest"></class>
+			<class name="com.Automation.Test.HomePageTest"></class>
+		</classes>
+	</test>
+</suite>
