@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        COMPOSE_PATH = "${WORKSPACE}/Docker" // 🔁 Adjust if compose file is elsewhere
+        COMPOSE_PATH = "${WORKSPACE}/docker" // 🔁 Adjust if compose file is elsewhere
         SELENIUM_GRID = "true"
     }
 
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     echo "Starting Selenium Grid with Docker Compose..."
-                    bat "docker compose -f ${COMPOSE_PATH}\\Docker-Compose.yml up -d"
+                    bat "docker compose -f ${COMPOSE_PATH}\\docker-compose.yml up -d"
                     echo "Waiting for Selenium Grid to be ready..."
                     sleep 30 // Add a wait if needed
                 }
@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     echo "Stopping Selenium Grid..."
-                    bat "docker compose -f ${COMPOSE_PATH}\\Docker-Compose.yml down"
+                    bat "docker compose -f ${COMPOSE_PATH}\\docker-compose.yml down"
                 }
             }
         }
@@ -68,7 +68,7 @@ pipeline {
 
         success {
             emailext (
-                to: 'purveshvj@gmail.com',
+                to: 'purveshvj2201@gmail.com',
                 subject: "Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
                 <html>
@@ -92,7 +92,7 @@ pipeline {
 
         failure {
             emailext (
-                to: 'purveshvj@gmail.com',
+                to: 'purveshvj2201@gmail.com',
                 subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
                 <html>
