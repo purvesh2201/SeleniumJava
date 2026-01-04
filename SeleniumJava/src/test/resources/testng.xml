@@ -13,7 +13,7 @@
 			<class name="com.Automation.Test.HomePageTest"></class>
 		</classes>
 	</test>
-<!--
+
 	<test name="SeleniumJavaTest_chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -29,5 +29,5 @@
 			<class name="com.Automation.Test.HomePageTest"></class>
 		</classes>
 	</test>
- -->
+
 </suite>
