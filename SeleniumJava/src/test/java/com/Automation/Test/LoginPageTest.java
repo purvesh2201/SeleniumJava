@@ -38,7 +38,7 @@ public class LoginPageTest extends BaseClass {
 	@Test(dataProvider = "invalidLoginData",dataProviderClass = DataProviders.class)
 	public void invalidlogintext(String username,String password) {
 		loginpage.login(username,password);
-		System.out.println(loginpage.isErrorDispalyed("Invalid credentials"));
+		//System.out.println(loginpage.isErrorDispalyed("Invalid credentials"));
 		Assert.assertTrue(loginpage.isErrorDispalyed("Invalid credentials"));
 		ExtentManager.logStep("Either username or password is incorrect");
 	}
